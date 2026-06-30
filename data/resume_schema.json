@@ -1,0 +1,379 @@
+{
+    "profile": {
+      "name": "Naveen Ramisetty",
+      "headline": "Enterprise Integration & Data Analyst — returning to tech building with AI",
+      "email": "naveen.ramisetty@gmail.com",
+      "phone": "9160309301",
+      "summary": "Enterprise integration and data specialist with 23 years across CRM, SOA, and B2B systems, and 15 years of parallel volunteer work in agrarian policy research and farmer welfare advocacy in Telangana.",
+      "location": "Hyderabad, India",
+      "intro_paragraphs": [
+        "I have 20+ years of experience in enterprise applications, integration architecture, CRM/ERP platforms, and data engineering. I worked in IT from 2003–2014 at Ciena and Infosys, then led social-impact research and policy analytics — and I am now setting up a personal learning environment to understand the AI ecosystem while building real apps.",
+        "My focus today: agents, skills, and markdown-based instruction files — paired with hands-on projects in Python, dashboards, and automation."
+      ]
+    },
+  
+    "tracks": [
+      { "id": "tech", "label": "Technology & Consulting", "color": "#2563eb" },
+      { "id": "social", "label": "Social Work & Policy", "color": "#16a34a" },
+      { "id": "experiments", "label": "Personal Experiments & Open Source", "color": "#d97706" }
+    ],
+  
+    "education": [
+      { "degree": "LLB", "institution": "Kakatiya University, India", "year": 2022 },
+      { "degree": "Masters in Computer Applications", "institution": "Kakatiya University, India", "year": 2001 },
+      { "degree": "Bachelors in Business Management", "institution": "Kakatiya University, India", "year": 1998 }
+    ],
+  
+    "certifications": [
+      { "name": "Chordiant Certified CRM Technical Developer (J2EE)", "year": null }
+    ],
+  
+    "trainings": [
+      "Oracle SOA Suite 11g",
+      "Siebel 6.3/7.5 (eLearning, Siebel University)"
+    ],
+  
+    "skills": [
+      { "name": "Python", "category": "Languages/Packages", "last_used": 2026, "status": "active" },
+      { "name": "Dash", "category": "Languages/Packages", "last_used": 2026, "status": "active" },
+      { "name": "Pandas", "category": "Languages/Packages", "last_used": 2026, "status": "active" },
+      { "name": "Ag Grid", "category": "Languages/Packages", "last_used": 2026, "status": "active" },
+  
+      { "name": "Tableau", "category": "Reporting Tools", "last_used": 2026, "status": "active" },
+      { "name": "Metabase", "category": "Reporting Tools", "last_used": 2026, "status": "active" },
+  
+      { "name": "OpenClaw", "category": "AI Agents & Automation", "last_used": 2026, "status": "active", "level": "beginner" },
+      { "name": "Hermes Agent", "category": "AI Agents & Automation", "last_used": 2026, "status": "active", "level": "beginner" },
+      { "name": "Cursor", "category": "AI Agents & Automation", "last_used": 2026, "status": "active" },
+      { "name": "Claude Code", "category": "AI Agents & Automation", "last_used": 2026, "status": "active" },
+  
+      { "name": "Oracle Cloud Integration (OIC)", "category": "Cloud Integration", "last_used": 2026, "status": "active" },
+  
+      { "name": "Siebel Sales", "category": "Siebel Applications", "last_used": 2014, "status": "dormant" },
+      { "name": "Siebel Financial Services", "category": "Siebel Applications", "last_used": 2006, "status": "dormant" },
+      { "name": "Siebel Call Center", "category": "Siebel Applications", "last_used": 2014, "status": "dormant" },
+      { "name": "Siebel eCommunications", "category": "Siebel Applications", "last_used": 2004, "status": "dormant" },
+      { "name": "Siebel eChannel", "category": "Siebel Applications", "last_used": 2014, "status": "dormant" },
+  
+      { "name": "Oracle Manufacturing", "category": "Oracle Applications", "last_used": 2014, "status": "dormant" },
+      { "name": "Oracle Financials", "category": "Oracle Applications", "last_used": 2014, "status": "dormant" },
+      { "name": "Oracle SOA", "category": "Oracle Applications", "last_used": 2022, "status": "dormant" },
+      { "name": "BPEL", "category": "Oracle Applications", "last_used": 2022, "status": "dormant" },
+      { "name": "BAM", "category": "Oracle Applications", "last_used": 2022, "status": "dormant" },
+      { "name": "B2B Integration (EDI, RosettaNet, cXML)", "category": "Oracle Applications", "last_used": 2022, "status": "dormant" },
+      { "name": "Sys Admin", "category": "Oracle Applications", "last_used": 2014, "status": "dormant" },
+  
+      { "name": "Oracle Database (10g/9i/8i)", "category": "Databases", "last_used": 2022, "status": "active" },
+      { "name": "MS SQL Server", "category": "Databases", "last_used": 2014, "status": "dormant" },
+      { "name": "DB2 UDB", "category": "Databases", "last_used": 2006, "status": "dormant" },
+  
+      { "name": "Informatica 5.0", "category": "ETL Tools", "last_used": 2006, "status": "dormant" }
+    ],
+  
+    "roles": [
+      {
+        "id": "social_work_2010",
+        "track": "social",
+        "title": "Social Worker / Volunteer & Policy Researcher",
+        "organization": "Multiple farmer welfare organizations, Telangana",
+        "client_industry": "Agriculture & Public Policy",
+        "start_date": "2010-01",
+        "end_date": null,
+        "is_current": true,
+        "location": "Telangana, India",
+        "description": "Volunteer work across multiple farmer welfare and rural advocacy groups, combining field research with operational and organizational responsibilities.",
+        "bullets": [
+          "Led large-scale field study and co-authored report: 'Farmer Suicides, Land Ownership, Tenant Farmers & Rythu Bandhu'",
+          "Currently leading a second field study in Telangana state",
+          "Serve as senior office-bearer and state executive committee member across affiliated organizations",
+          "Support operational planning, budget oversight, and workforce coordination for field research initiatives",
+          "Manage accounting, payroll, and process coordination for program activities",
+          "Run fundraising and public awareness campaigns for farmer welfare causes",
+          "Conduct fact-based analysis to support decision making across affiliated organizations"
+        ],
+        "skills_used": [
+          "Data Analysis", "Public Policy", "Field Research", "Report Writing", "Stakeholder Engagement",
+          "Operational Planning", "Budget Oversight", "Workforce Coordination", "Process Management",
+          "Accounting", "Payroll", "Fundraising", "Fact-Based Decision Making"
+        ],
+        "metrics": [
+          { "label": "Reports Authored", "value": "2+" }
+        ],
+        "environment_tags": []
+      },
+      {
+        "id": "ciena_2006_2014",
+        "track": "tech",
+        "title": "Senior Analyst",
+        "organization": "Ciena Corporation",
+        "client_industry": "Telecom / Networking",
+        "start_date": "2006-09",
+        "end_date": "2014-06",
+        "is_current": false,
+        "location": "India",
+        "description": "Siebel Sales application upgrade and support; CRM systems design, B2B integration, and Oracle SOA-based orchestration.",
+        "bullets": [
+          "Design, development, and support for corporate CRM systems",
+          "Automated quote reconciliation, quote splitting, bulk order consumption",
+          "Built B2B integration gateway (EDI, RosettaNet, cXML) for order-to-cash processes",
+          "Oracle E-Business Suite 11.5.10.2 upgrade from 11.5.6"
+        ],
+        "skills_used": ["Siebel Sales", "Oracle SOA", "BPEL", "B2B Integration (EDI, RosettaNet, cXML)"],
+        "metrics": [],
+        "environment_tags": ["Siebel Sales Application", "Oracle Applications 10R2", "Oracle SOA 10.1.3/11g"]
+      },
+      {
+        "id": "ciena_2022_return",
+        "track": "tech",
+        "title": "Consulting Engagement (Return Engagement)",
+        "organization": "Ciena Corporation",
+        "client_industry": "Telecom / Networking",
+        "start_date": "2022-01",
+        "end_date": "2022-06",
+        "is_current": false,
+        "location": "India",
+        "description": "Six-month return engagement supporting B2B and Oracle SOA integration work.",
+        "bullets": [
+          "Supported ongoing B2B integration and Oracle SOA maintenance"
+        ],
+        "skills_used": ["B2B Integration (EDI, RosettaNet, cXML)", "Oracle SOA"],
+        "metrics": [],
+        "environment_tags": []
+      },
+      {
+        "id": "goldman_2004",
+        "track": "tech",
+        "title": "Siebel Consultant (via Infosys)",
+        "organization": "Goldman Sachs International",
+        "client_industry": "Investment Banking",
+        "start_date": "2004-09",
+        "end_date": "2006-04",
+        "is_current": false,
+        "location": "Hyderabad, India",
+        "description": "Configuration and data migration for Siebel Financial Services.",
+        "bullets": [
+          "Created extension columns, updated database schema, configured business rules",
+          "Designed budget entry views for Sales Persons and Managers",
+          "Configured virtual Business Components using custom Business Services"
+        ],
+        "skills_used": ["Siebel Financial Services", "Informatica 5.0", "DB2 UDB"],
+        "metrics": [],
+        "environment_tags": ["Siebel Financial Services 6.3/7.8", "Informatica", "DB2", "Citrix Server"]
+      },
+      {
+        "id": "toshiba_2004",
+        "track": "tech",
+        "title": "Siebel Consultant (via Infosys)",
+        "organization": "Toshiba Corporation",
+        "client_industry": "Manufacturing / Electronics",
+        "start_date": "2004-06",
+        "end_date": "2004-08",
+        "is_current": false,
+        "location": "Hyderabad, India",
+        "description": "CRM configuration and support for Toshiba manufacturing sales operations.",
+        "bullets": [
+          "Configured Siebel sales and service workflows for manufacturing order cycles",
+          "Supported data migration and integration between Siebel and legacy systems",
+          "Collaborated with client SMEs on requirements for enterprise sales processes"
+        ],
+        "skills_used": ["Siebel Sales", "Siebel eChannel", "Informatica 5.0"],
+        "metrics": [],
+        "environment_tags": ["Siebel Sales Application"]
+      },
+      {
+        "id": "telstra_2003",
+        "track": "tech",
+        "title": "Siebel Consultant (via Infosys)",
+        "organization": "Telstra",
+        "client_industry": "Telecom",
+        "start_date": "2003-07",
+        "end_date": "2004-05",
+        "is_current": false,
+        "location": "Hyderabad, India",
+        "description": "Telecom CRM implementation for customer onboarding, complaints, and service workflows.",
+        "bullets": [
+          "Implemented Siebel eCommunications modules for telecom sales and service",
+          "Built complaint management and customer onboarding workflows",
+          "Developed ETL and data migration routines with Informatica and PL/SQL"
+        ],
+        "skills_used": ["Siebel eCommunications", "Siebel Call Center", "Informatica 5.0"],
+        "metrics": [],
+        "environment_tags": ["Siebel eCommunications", "Informatica"]
+      },
+      {
+        "id": "capital_one_2003",
+        "track": "tech",
+        "title": "Siebel Consultant (via Infosys)",
+        "organization": "Capital One",
+        "client_industry": "Banking / Financial Services",
+        "start_date": "2003-01",
+        "end_date": "2003-06",
+        "is_current": false,
+        "location": "Richmond, Virginia, US",
+        "description": "On-site fraud and dispute case management implementation using Chordiant and J2EE.",
+        "bullets": [
+          "Implemented fraud and dispute management workflows for Capital One (US onsite)",
+          "Migrated PL/SQL logic and configured Chordiant/J2EE case management components",
+          "Integrated Siebel EAI/EIM with middleware for banking CRM operations"
+        ],
+        "skills_used": ["Siebel Financial Services", "Oracle Database (10g/9i/8i)", "Informatica 5.0"],
+        "metrics": [],
+        "environment_tags": ["Chordiant/J2EE", "Siebel EAI/EIM", "PL/SQL"]
+      }
+    ],
+  
+    "highlighted_projects": [
+      {
+        "id": "farmer_suicide_study",
+        "track": "social",
+        "title": "Farmer Suicides, Land Ownership, Tenant Farmers & Rythu Bandhu",
+        "type": "Field Research Report",
+        "year": "2010-present",
+        "description": "Co-authored field study examining farmer suicides in relation to land ownership and tenancy patterns.",
+        "tags": ["Public Policy", "Field Research", "Agriculture"]
+      },
+      {
+        "id": "local_llm_messaging",
+        "track": "experiments",
+        "title": "Local LLM Messaging Integration",
+        "type": "Personal Project",
+        "year": "2026",
+        "description": "Configured Telegram and WhatsApp to interact with locally-run Ollama LLM models, experimenting with agent frameworks OpenClaw and Hermes Agent.",
+        "tags": ["AI Agents", "Local LLM", "Automation", "Open Source"]
+      }
+    ],
+
+    "core_competencies": [
+      {
+        "id": "ai_automation",
+        "title": "AI & Automation",
+        "summary": "OpenClaw, Hermes Agent, Cursor, Claude Code, Ollama",
+        "items": [
+          { "label": "OpenClaw", "skill_key": "OpenClaw", "highlight": false },
+          { "label": "Hermes Agent", "skill_key": "Hermes Agent", "highlight": false },
+          { "label": "Cursor", "skill_key": "Cursor", "highlight": false },
+          { "label": "Claude Code", "skill_key": "Claude Code", "highlight": false },
+          { "label": "Ollama", "skill_key": null, "highlight": false }
+        ]
+      },
+      {
+        "id": "enterprise_integration",
+        "title": "Enterprise Integration",
+        "summary": "Oracle SOA/BPEL/Oracle Integration Cloud (OIC), Siebel CRM, EAI/EIM",
+        "items": [
+          { "label": "Oracle SOA", "skill_key": "Oracle SOA", "highlight": true },
+          { "label": "BPEL", "skill_key": "BPEL", "highlight": true },
+          { "label": "Oracle Integration Cloud (OIC)", "skill_key": "Oracle Cloud Integration (OIC)", "highlight": true },
+          { "label": "Siebel CRM", "skill_key": null, "highlight": false },
+          { "label": "EAI/EIM", "skill_key": null, "highlight": false }
+        ]
+      },
+      {
+        "id": "b2b_messaging",
+        "title": "B2B & Messaging Integration",
+        "summary": "EDI, cXML, RosettaNet, XML, XSLT/XPath, Web Services",
+        "items": [
+          { "label": "EDI", "skill_key": null, "highlight": false },
+          { "label": "cXML", "skill_key": null, "highlight": false },
+          { "label": "RosettaNet", "skill_key": null, "highlight": false },
+          { "label": "XML", "skill_key": null, "highlight": false },
+          { "label": "XSLT/XPath", "skill_key": null, "highlight": false },
+          { "label": "Web Services", "skill_key": null, "highlight": false },
+          { "label": "B2B Integration", "skill_key": "B2B Integration (EDI, RosettaNet, cXML)", "highlight": true }
+        ]
+      },
+      {
+        "id": "data_engineering",
+        "title": "Data Engineering & ETL",
+        "summary": "Informatica, Data Migration, Transformation, Bulk Loading, SQL Loader",
+        "items": [
+          { "label": "Informatica", "skill_key": "Informatica 5.0", "highlight": false },
+          { "label": "Data Migration", "skill_key": null, "highlight": false },
+          { "label": "Transformation", "skill_key": null, "highlight": false },
+          { "label": "Bulk Loading", "skill_key": null, "highlight": false },
+          { "label": "SQL Loader", "skill_key": null, "highlight": false }
+        ]
+      },
+      {
+        "id": "databases",
+        "title": "Databases",
+        "summary": "Oracle, SQL Server, DB2, PL/SQL, SQL, MariaDb",
+        "items": [
+          { "label": "Oracle", "skill_key": "Oracle Database (10g/9i/8i)", "highlight": false },
+          { "label": "SQL Server", "skill_key": "MS SQL Server", "highlight": false },
+          { "label": "DB2", "skill_key": "DB2 UDB", "highlight": false },
+          { "label": "PL/SQL", "skill_key": null, "highlight": false },
+          { "label": "SQL", "skill_key": null, "highlight": false },
+          { "label": "MariaDb", "skill_key": null, "highlight": false }
+        ]
+      },
+      {
+        "id": "analytics_reporting",
+        "title": "Analytics & Reporting",
+        "summary": "Python (Pandas, Matplotlib), Plotly Dash, Tableau, Metabase, Actuate",
+        "items": [
+          { "label": "Python", "skill_key": "Python", "highlight": false },
+          { "label": "Pandas", "skill_key": "Pandas", "highlight": false },
+          { "label": "Matplotlib", "skill_key": null, "highlight": false },
+          { "label": "Plotly Dash", "skill_key": "Dash", "highlight": false },
+          { "label": "Tableau", "skill_key": "Tableau", "highlight": false },
+          { "label": "Metabase", "skill_key": "Metabase", "highlight": false },
+          { "label": "Actuate", "skill_key": null, "highlight": false }
+        ]
+      },
+      {
+        "id": "architecture_operations",
+        "title": "Architecture & Operations",
+        "summary": "Production Support, Release Management, Application Upgrades, Performance Tuning",
+        "items": [
+          { "label": "Production Support", "skill_key": null, "highlight": false },
+          { "label": "Release Management", "skill_key": null, "highlight": false },
+          { "label": "Application Upgrades", "skill_key": null, "highlight": false },
+          { "label": "Performance Tuning", "skill_key": null, "highlight": false }
+        ]
+      },
+      {
+        "id": "leadership",
+        "title": "Leadership",
+        "summary": "Cross-functional Coordination, Stakeholder Management, Technical Design Reviews",
+        "items": [
+          { "label": "Cross-functional Coordination", "skill_key": null, "highlight": false },
+          { "label": "Stakeholder Management", "skill_key": null, "highlight": false },
+          { "label": "Technical Design Reviews", "skill_key": null, "highlight": false }
+        ]
+      }
+    ],
+
+    "projects": [
+      {
+        "title": "Fitness Tracking App",
+        "description": "Log meals and workouts via natural language; get nightly summaries.",
+        "status": "in_progress"
+      },
+      {
+        "title": "Portfolio Site",
+        "description": "This site — a single-page resume and project showcase.",
+        "status": "in_progress"
+      },
+      {
+        "title": "Farmer Suicides Documentation",
+        "description": "Scrape newspapers to document and analyze farmer suicide reports.",
+        "status": "planned"
+      },
+      {
+        "title": "Family Will Assistant",
+        "description": "An assistant to help draft wills for family members.",
+        "status": "planned"
+      },
+      {
+        "title": "Rental Property Management",
+        "description": "Tools to manage rental properties and related workflows.",
+        "status": "planned"
+      }
+    ],
+
+    "ui_config": {
+      "default_view": "consulting",
+      "available_views": ["consulting", "skills", "timeline", "projects", "beyond"]
+    }
+  }

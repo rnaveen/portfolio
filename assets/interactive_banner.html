@@ -1,0 +1,351 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --dark-bg: #0d1b2a;
+    --panel-bg: #111d2c;
+    --center-bg: #1a2a3a;
+    --teal: #00e5b0;
+    --purple: #a78bfa;
+    --pink: #f472b6;
+    --blue: #60a5fa;
+    --amber: #fbbf24;
+    --white: #f1f5f9;
+    --muted: #94a3b8;
+  }
+  .banner-root {
+    background: var(--dark-bg);
+    border-radius: 16px;
+    padding: 32px 24px;
+    font-family: var(--font-sans, system-ui, sans-serif);
+    color: var(--white);
+    overflow: hidden;
+    position: relative;
+    min-height: 320px;
+  }
+  .banner-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr 180px;
+    gap: 16px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .sources, .targets {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .node {
+    background: var(--panel-bg);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: border-color 0.25s, background 0.25s, transform 0.2s;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    position: relative;
+  }
+  .node:hover { background: rgba(255,255,255,0.06); transform: translateX(4px); }
+  .node.target:hover { transform: translateX(-4px); }
+  .node.active { border-color: var(--node-color); color: var(--white); background: rgba(255,255,255,0.06); }
+  .node i { font-size: 20px; color: var(--node-color); }
+  .center-card {
+    background: linear-gradient(135deg, #1a2f45 0%, #0d1f30 100%);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 14px;
+    padding: 24px 20px;
+    text-align: center;
+    position: relative;
+  }
+  .center-card h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.06em;
+    margin-bottom: 6px;
+  }
+  .center-card .role {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--teal);
+    margin-bottom: 4px;
+  }
+  .center-card .sub {
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .contact-row a { color: var(--muted); text-decoration: none; }
+  .contact-row a:hover { color: var(--teal); }
+  .pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .pipe-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .pipe-step:hover { transform: translateY(-3px); }
+  .pipe-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background: rgba(255,255,255,0.04);
+    transition: border-color 0.25s, background 0.25s;
+  }
+  .pipe-step:hover .pipe-icon { border-color: var(--teal); background: rgba(0,229,176,0.1); color: var(--teal); }
+  .pipe-step.lit .pipe-icon { border-color: var(--teal); background: rgba(0,229,176,0.15); color: var(--teal); }
+  .pipe-dot {
+    width: 20px;
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+    margin-top: 15px;
+  }
+  .pipe-label {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .tooltip-bar {
+    background: rgba(0,229,176,0.1);
+    border: 1px solid rgba(0,229,176,0.25);
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 12px;
+    color: var(--teal);
+    text-align: center;
+    margin-top: 16px;
+    min-height: 36px;
+    transition: opacity 0.3s;
+    line-height: 1.4;
+  }
+  .stream-canvas {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .btn-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  .cta-btn {
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: transparent;
+    color: var(--muted);
+    transition: all 0.2s;
+    letter-spacing: 0.03em;
+  }
+  .cta-btn:hover { background: rgba(255,255,255,0.07); color: var(--white); border-color: var(--teal); }
+  .cta-btn.primary { background: rgba(0,229,176,0.15); color: var(--teal); border-color: var(--teal); }
+  .cta-btn.primary:hover { background: rgba(0,229,176,0.25); }
+</style>
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Naveen Kumar Ramisetty — interactive enterprise integration banner</h2>
+
+<div class="banner-root" id="root">
+  <canvas class="stream-canvas" id="streamCanvas"></canvas>
+  <div class="banner-grid">
+    <div class="sources">
+      <div class="node active" style="--node-color:#00e5b0" data-src="db" onclick="activateSource('db', this)">
+        <i class="ti ti-database" aria-hidden="true"></i> Databases
+      </div>
+      <div class="node" style="--node-color:#60a5fa" data-src="csv" onclick="activateSource('csv', this)">
+        <i class="ti ti-file-text" aria-hidden="true"></i> Files / CSV
+      </div>
+      <div class="node" style="--node-color:#f472b6" data-src="iot" onclick="activateSource('iot', this)">
+        <i class="ti ti-wifi" aria-hidden="true"></i> Streams / IoT
+      </div>
+    </div>
+
+    <div>
+      <div class="center-card">
+        <div class="role">Enterprise Integration & Data Analyst</div>
+        <h1>NAVEEN KUMAR RAMISETTY</h1>
+        <div class="sub">US + India Experience &nbsp;|&nbsp; CRM · Integration · Policy Analytics</div>
+        <div class="contact-row">
+          <span><i class="ti ti-phone" aria-hidden="true" style="font-size:12px;vertical-align:-1px"></i> +91 9160309301</span>
+          <a href="mailto:naveen.ramisetty@gmail.com"><i class="ti ti-mail" aria-hidden="true" style="font-size:12px;vertical-align:-1px"></i> naveen.ramisetty@gmail.com</a>
+        </div>
+        <div class="pipeline">
+          <div class="pipe-step lit" data-tip="Plug into any data source — Oracle SOA, Siebel EAI, EDI/B2B, APIs, IoT" onclick="showTip(this)">
+            <div class="pipe-icon"><i class="ti ti-plug-connected" aria-hidden="true"></i></div>
+            <div class="pipe-label">Connect</div>
+          </div>
+          <div class="pipe-dot"></div>
+          <div class="pipe-step" data-tip="XSLT, BPEL orchestration, Informatica ETL — data shaped for any target" onclick="showTip(this)">
+            <div class="pipe-icon"><i class="ti ti-arrows-exchange" aria-hidden="true"></i></div>
+            <div class="pipe-label">Transform</div>
+          </div>
+          <div class="pipe-dot"></div>
+          <div class="pipe-step" data-tip="Schema validation, data quality checks, compliance rules — nothing slips through" onclick="showTip(this)">
+            <div class="pipe-icon"><i class="ti ti-shield-check" aria-hidden="true"></i></div>
+            <div class="pipe-label">Validate</div>
+          </div>
+          <div class="pipe-dot"></div>
+          <div class="pipe-step" data-tip="End-to-end Order-to-Cash pipelines, CRM/ERP integrations across enterprises" onclick="showTip(this)">
+            <div class="pipe-icon"><i class="ti ti-puzzle" aria-hidden="true"></i></div>
+            <div class="pipe-label">Integrate</div>
+          </div>
+          <div class="pipe-dot"></div>
+          <div class="pipe-step" data-tip="Dashboards, policy analytics, AI agents — turning data into decisions" onclick="showTip(this)">
+            <div class="pipe-icon"><i class="ti ti-bulb" aria-hidden="true"></i></div>
+            <div class="pipe-label">Empower</div>
+          </div>
+        </div>
+        <div class="tooltip-bar" id="tipBar">Click any pipeline step to see what it means</div>
+        <div class="btn-row">
+          <button class="cta-btn primary" onclick="sendPrompt('Tell me about Naveen\'s enterprise integration experience')">Explore experience ↗</button>
+          <button class="cta-btn" onclick="sendPrompt('What projects is Naveen building?')">See projects ↗</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="targets">
+      <div class="node target active" style="--node-color:#a78bfa" data-tgt="cloud" onclick="activateTarget('cloud', this)">
+        <i class="ti ti-cloud" aria-hidden="true"></i> Cloud Apps
+      </div>
+      <div class="node target" style="--node-color:#fbbf24" data-tgt="api" onclick="activateTarget('api', this)">
+        <i class="ti ti-settings-2" aria-hidden="true"></i> APIs
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('streamCanvas');
+const ctx = canvas.getContext('2d');
+const root = document.getElementById('root');
+
+let W, H;
+function resize() {
+  W = canvas.width = root.offsetWidth;
+  H = canvas.height = root.offsetHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+const srcColors = { db: '#00e5b0', csv: '#60a5fa', iot: '#f472b6' };
+const tgtColors = { cloud: '#a78bfa', api: '#fbbf24' };
+let activeSrc = 'db';
+let activeTgt = 'cloud';
+
+let particles = [];
+
+function spawnParticle() {
+  const srcEl = document.querySelector(`[data-src="${activeSrc}"]`);
+  const tgtEl = document.querySelector(`[data-tgt="${activeTgt}"]`);
+  if (!srcEl || !tgtEl) return;
+  const sr = srcEl.getBoundingClientRect();
+  const tr = tgtEl.getBoundingClientRect();
+  const rr = root.getBoundingClientRect();
+  const sx = sr.right - rr.left;
+  const sy = (sr.top + sr.bottom) / 2 - rr.top;
+  const tx = tr.left - rr.left;
+  const ty = (tr.top + tr.bottom) / 2 - rr.top;
+  const mid = W / 2;
+  particles.push({
+    sx, sy, tx, ty, mid,
+    t: 0,
+    speed: 0.004 + Math.random() * 0.004,
+    size: 2 + Math.random() * 2.5,
+    color: Math.random() > 0.5 ? srcColors[activeSrc] : tgtColors[activeTgt],
+    trail: []
+  });
+}
+
+function bezierPt(t, sx, sy, tx, ty, mid, my) {
+  const cx1 = mid, cy1 = sy;
+  const cx2 = mid, cy2 = ty;
+  const u = 1 - t;
+  return {
+    x: u*u*u*sx + 3*u*u*t*cx1 + 3*u*t*t*cx2 + t*t*t*tx,
+    y: u*u*u*sy + 3*u*u*t*cy1 + 3*u*t*t*cy2 + t*t*t*ty
+  };
+}
+
+let lastSpawn = 0;
+function animate(ts) {
+  ctx.clearRect(0, 0, W, H);
+  if (ts - lastSpawn > 180) { spawnParticle(); lastSpawn = ts; }
+  particles = particles.filter(p => p.t <= 1);
+  particles.forEach(p => {
+    p.t += p.speed;
+    const pt = bezierPt(p.t, p.sx, p.sy, p.tx, p.ty, p.mid);
+    p.trail.push({x: pt.x, y: pt.y});
+    if (p.trail.length > 12) p.trail.shift();
+    p.trail.forEach((tp, i) => {
+      const alpha = (i / p.trail.length) * 0.55;
+      ctx.beginPath();
+      ctx.arc(tp.x, tp.y, p.size * (i / p.trail.length), 0, Math.PI * 2);
+      ctx.fillStyle = p.color + Math.floor(alpha * 255).toString(16).padStart(2, '0');
+      ctx.fill();
+    });
+    ctx.beginPath();
+    ctx.arc(pt.x, pt.y, p.size, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.shadowBlur = 8;
+    ctx.shadowColor = p.color;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+  });
+  requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
+
+function activateSource(key, el) {
+  document.querySelectorAll('.sources .node').forEach(n => n.classList.remove('active'));
+  el.classList.add('active');
+  activeSrc = key;
+}
+function activateTarget(key, el) {
+  document.querySelectorAll('.targets .node').forEach(n => n.classList.remove('active'));
+  el.classList.add('active');
+  activeTgt = key;
+}
+function showTip(el) {
+  document.querySelectorAll('.pipe-step').forEach(s => s.classList.remove('lit'));
+  el.classList.add('lit');
+  document.getElementById('tipBar').textContent = el.dataset.tip;
+}
+</script>

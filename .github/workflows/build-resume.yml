@@ -1,0 +1,28 @@
+name: Build resume dashboard
+
+on:
+  push:
+    paths:
+      - "data/resume_schema.json"
+      - "data/hobbies.json"
+      - "resume-overrides.md"
+      - "scripts/build_resume_data.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run build script
+        run: python3 scripts/build_resume_data.py
+
+      - name: Commit generated JSON
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: regenerate resume_dashboard.json"
+          file_pattern: data/resume_dashboard.json

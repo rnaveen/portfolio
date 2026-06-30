@@ -1,0 +1,7 @@
+{
+  "hobbies": [
+    { "title": "Running", "description": "Regular runner, working toward longer distances." },
+    { "title": "Cycling", "description": "Rides for commuting, fitness and exploring local routes." },
+    { "title": "Volunteering", "description": "Active in farmer welfare and rural advocacy work." }
+  ]
+}
