@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Naveen Ramisetty",
-    "headline": "Enterprise Integration & Data Analyst · Volunteer",
+    "headline": "Enterprise Integration & Data Analyst · Agrarian policy & field research",
     "email": "naveen.ramisetty@gmail.com",
     "phone": "9160309301",
     "github": "https://github.com/rnaveen",
@@ -9,13 +9,11 @@
     "summary": "Enterprise integration and data specialist with 23 years across CRM, SOA, and B2B systems, and 15 years of parallel volunteer work in agrarian policy research and farmer welfare advocacy in Telangana.",
     "location": "Hyderabad, India",
     "photo": "assets/photo.jpg",
-    "impact_callout": "I have 20+ years of experience in enterprise applications, integration architecture, CRM/ERP platforms and data engineering.",
+    "impact_callout": "Alongside enterprise consulting, 15+ years in farmer welfare advocacy and agrarian policy research in Telangana.",
     "intro_paragraphs": [
-      "Motion is my constant — I can only figure things out when I'm moving. ",
-      "I run. I cycle — often solo, always long. I eat plant-based. I brew coffee like it matters, because I believe it does. I can't live without people. I volunteer, fundraise, show up for causes that matter... 15 years of that has been farmer welfare in rural India, ground-level.",
-      "Now I'm learning the AI ecosystem by building things, not just reading about them. Agents, skills, markdown-based instruction files —  hands-on projects in Python, dashboards, and automation.",
-      "Always somewhere new. Always mid-experiment — on coffee, on code, on roads I haven't taken yet."
-      ]
+      "I have 20+ years of experience in enterprise applications, integration architecture, CRM/ERP platforms, and data engineering. I worked in IT from 2003–2014 at Ciena and Infosys, then led social-impact research and policy analytics — and I am now setting up a personal learning environment to understand the AI ecosystem while building real apps.",
+      "My focus today: agents, skills, and markdown-based instruction files — paired with hands-on projects in Python, dashboards, and automation."
+    ]
   },
   "domain_expertise": [
     {
@@ -73,7 +71,7 @@
           "label": "Goldman Sachs International"
         },
         {
-          "id": "capital_one_2006",
+          "id": "capital_one_2003",
           "label": "Capital One"
         }
       ]
@@ -101,112 +99,147 @@
       {
         "id": "ai_automation",
         "title": "AI & Automation",
-        "summary": "OpenClaw, Hermes Agent, Cursor, Claude Code, Local LLMs (Ollama)",
+        "summary": "OpenClaw, Hermes Agent, Cursor, Claude Code, Ollama",
         "items": [
           {
             "label": "OpenClaw",
             "skill_key": "OpenClaw",
             "highlight": false,
-            "years": 0.6,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Hermes Agent",
             "skill_key": "Hermes Agent",
             "highlight": false,
-            "years": 0.3,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Cursor",
             "skill_key": "Cursor",
             "highlight": false,
-            "years": 1.0,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Claude Code",
             "skill_key": "Claude Code",
             "highlight": false,
-            "years": 0.3,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Ollama",
             "skill_key": null,
             "highlight": false,
-            "years": 0.6,
-            "status": "active"
+            "years": 0.0,
+            "status": "dormant"
           }
         ]
       },
       {
         "id": "enterprise_integration",
         "title": "Enterprise Integration",
-        "summary": "Oracle SOA Suite, Oracle Integration Cloud (OIC), Siebel CRM, EAI/EIM",
+        "summary": "Oracle SOA/BPEL/Oracle Integration Cloud (OIC), Siebel CRM, EAI/EIM",
         "items": [
           {
-            "label": "Oracle SOA Suite",
+            "label": "Oracle SOA",
             "skill_key": "Oracle SOA",
             "highlight": true,
             "years": 8.3,
-            "status": "active"
+            "status": "dormant"
           },
           {
             "label": "BPEL",
             "skill_key": "BPEL",
             "highlight": true,
-            "years": 8.3,
+            "years": 7.8,
             "status": "dormant"
           },
           {
             "label": "Oracle Integration Cloud (OIC)",
             "skill_key": "Oracle Cloud Integration (OIC)",
             "highlight": true,
-            "years": 0.2,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Siebel CRM",
             "skill_key": null,
             "highlight": false,
-            "years": 8.0,
+            "years": 0.0,
             "status": "dormant"
           },
           {
             "label": "EAI/EIM",
             "skill_key": null,
             "highlight": false,
-            "years": 6.0,
+            "years": 0.0,
             "status": "dormant"
           }
         ]
       },
       {
         "id": "b2b_messaging",
-        "title": "Integration Technologies",
-        "summary": "B2B Integration (EDI, cXML, RosettaNet), XML, XSLT/XPath, SOAP/REST Web Services",
+        "title": "B2B & Messaging Integration",
+        "summary": "EDI, cXML, RosettaNet, XML, XSLT/XPath, Web Services",
         "items": [
           {
-            "label": "B2B Integration (EDI, cXML, RosettaNet)",
+            "label": "EDI",
             "skill_key": null,
             "highlight": false,
-            "years": 7.0,
-            "status": "active"
+            "years": 0.0,
+            "status": "dormant"
           },
           {
-            "label": "XML, XSLT/XPath, SOAP/REST Web Services ",
+            "label": "cXML",
             "skill_key": null,
             "highlight": false,
-            "years": 7.0,
-            "status": "active"
+            "years": 0.0,
+            "status": "dormant"
+          },
+          {
+            "label": "RosettaNet",
+            "skill_key": null,
+            "highlight": false,
+            "years": 0.0,
+            "status": "dormant"
+          },
+          {
+            "label": "XML",
+            "skill_key": null,
+            "highlight": false,
+            "years": 0.0,
+            "status": "dormant"
+          },
+          {
+            "label": "XSLT/XPath",
+            "skill_key": null,
+            "highlight": false,
+            "years": 0.0,
+            "status": "dormant"
+          },
+          {
+            "label": "Web Services",
+            "skill_key": null,
+            "highlight": false,
+            "years": 0.0,
+            "status": "dormant"
+          },
+          {
+            "label": "B2B Integration",
+            "skill_key": "B2B Integration (EDI, RosettaNet, cXML)",
+            "highlight": true,
+            "years": 8.3,
+            "status": "dormant"
           }
         ]
       },
       {
         "id": "data_engineering",
         "title": "Data Engineering & ETL",
-        "summary": "Informatica, ETL & Data Migration, PL/SQL, SQL Loader, SQL Server, DB2, MariaDb, Oracle",
+        "summary": "Informatica, Data Migration, Transformation, Bulk Loading, SQL Loader",
         "items": [
           {
             "label": "Informatica",
@@ -216,31 +249,52 @@
             "status": "dormant"
           },
           {
-            "label": "ETL & Data Migration",
+            "label": "Data Migration",
             "skill_key": null,
             "highlight": false,
-            "years": 4.0,
+            "years": 0.0,
+            "status": "dormant"
+          },
+          {
+            "label": "Transformation",
+            "skill_key": null,
+            "highlight": false,
+            "years": 0.0,
+            "status": "dormant"
+          },
+          {
+            "label": "Bulk Loading",
+            "skill_key": null,
+            "highlight": false,
+            "years": 0.0,
             "status": "dormant"
           },
           {
             "label": "SQL Loader",
             "skill_key": null,
             "highlight": false,
-            "years": 2.0,
+            "years": 0.0,
             "status": "dormant"
-          },
+          }
+        ]
+      },
+      {
+        "id": "databases",
+        "title": "Databases",
+        "summary": "Oracle, SQL Server, DB2, PL/SQL, SQL, MariaDb",
+        "items": [
           {
             "label": "Oracle",
             "skill_key": "Oracle Database (10g/9i/8i)",
             "highlight": false,
-            "years": 15.5,
+            "years": 0.5,
             "status": "active"
           },
           {
             "label": "SQL Server",
             "skill_key": "MS SQL Server",
             "highlight": false,
-            "years": 3.0,
+            "years": 0.0,
             "status": "dormant"
           },
           {
@@ -253,15 +307,22 @@
           {
             "label": "PL/SQL",
             "skill_key": null,
-            "highlight": true,
-            "years": 14.0,
-            "status": "active"
+            "highlight": false,
+            "years": 0.0,
+            "status": "dormant"
+          },
+          {
+            "label": "SQL",
+            "skill_key": null,
+            "highlight": false,
+            "years": 0.0,
+            "status": "dormant"
           },
           {
             "label": "MariaDb",
             "skill_key": null,
             "highlight": false,
-            "years": 0.6,
+            "years": 0.0,
             "status": "dormant"
           }
         ]
@@ -269,55 +330,55 @@
       {
         "id": "analytics_reporting",
         "title": "Analytics & Reporting",
-        "summary": "Python, Data Analysis (Pandas), Visualization (Matplotlib, Plotly Dash, Tableau, Metabase, Actuate)",
+        "summary": "Python (Pandas, Matplotlib), Plotly Dash, Tableau, Metabase, Actuate",
         "items": [
           {
             "label": "Python",
             "skill_key": "Python",
-            "highlight": true,
-            "years": 6.0,
+            "highlight": false,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Pandas",
             "skill_key": "Pandas",
-            "highlight": true,
-            "years": 6.0,
+            "highlight": false,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Matplotlib",
             "skill_key": null,
-            "highlight": true,
-            "years": 4.0,
-            "status": "active"
+            "highlight": false,
+            "years": 0.0,
+            "status": "dormant"
           },
           {
             "label": "Plotly Dash",
             "skill_key": "Dash",
-            "highlight": true,
-            "years": 1.0,
+            "highlight": false,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Tableau",
             "skill_key": "Tableau",
-            "highlight": true,
-            "years": 3.0,
+            "highlight": false,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Metabase",
             "skill_key": "Metabase",
             "highlight": false,
-            "years": 2.0,
+            "years": 0.0,
             "status": "active"
           },
           {
             "label": "Actuate",
             "skill_key": null,
             "highlight": false,
-            "years": 3.0,
+            "years": 0.0,
             "status": "dormant"
           }
         ]
@@ -443,8 +504,8 @@
       "id": "ciena_2006_2014",
       "track": "tech",
       "period": "2006 — 2014",
-      "role": "Senior Data & Enterprise Applications Integration Analyst",
-      "org": "Ciena Corporation · US",
+      "role": "Senior Analyst",
+      "org": "Ciena Corporation · India",
       "detail": "Design, development, and support for corporate CRM systems. automated quote reconciliation, quote splitting, bulk order consumption. built B2B integration gateway (EDI, RosettaNet, cXML) for order-to-cash processes.",
       "bullets": [
         "Design, development, and support for corporate CRM systems",
@@ -462,9 +523,9 @@
       "openByDefault": false
     },
     {
-      "id": "goldman_2005",
+      "id": "goldman_2004",
       "track": "tech",
-      "period": "2005 — 2006",
+      "period": "2004 — 2006",
       "role": "Siebel Consultant (via Infosys)",
       "org": "Goldman Sachs International · Hyderabad, India",
       "detail": "Created extension columns, updated database schema, configured business rules. designed budget entry views for Sales Persons and Managers. configured virtual Business Components using custom Business Services.",
@@ -476,17 +537,15 @@
       "skills_used": [
         "Siebel Financial Services",
         "Informatica 5.0",
-        "eScript/VB Scripts",
-        "Siebel 6.3/7.5",
         "DB2 UDB"
       ],
       "color": "#f472b6",
       "openByDefault": false
     },
     {
-      "id": "toshiba_2005",
+      "id": "toshiba_2004",
       "track": "tech",
-      "period": "2005 — 2006",
+      "period": "2004 — 2004",
       "role": "Siebel Consultant (via Infosys)",
       "org": "Toshiba Corporation · Hyderabad, India",
       "detail": "Configured Siebel sales and service workflows for manufacturing order cycles. supported data migration and integration between Siebel and legacy systems. collaborated with client SMEs on requirements for enterprise sales processes.",
@@ -498,16 +557,15 @@
       "skills_used": [
         "Siebel Sales",
         "Siebel eChannel",
-        "eScript/VB Scripts",
-        "SQL Loader"
+        "Informatica 5.0"
       ],
       "color": "#fb7185",
       "openByDefault": false
     },
     {
-      "id": "telstra_2004",
+      "id": "telstra_2003",
       "track": "tech",
-      "period": "2004 — 2005",
+      "period": "2003 — 2004",
       "role": "Siebel Consultant (via Infosys)",
       "org": "Telstra · Hyderabad, India",
       "detail": "Implemented Siebel eCommunications modules for telecom sales and service. built complaint management and customer onboarding workflows. developed ETL and data migration routines with Informatica and PL/SQL.",
@@ -519,26 +577,27 @@
       "skills_used": [
         "Siebel eCommunications",
         "Siebel Call Center",
-        "eScript/VB Scripts",
-        "PL/SQL"
+        "Informatica 5.0"
       ],
       "color": "#00e5b0",
       "openByDefault": false
     },
     {
-      "id": "capital_one_2006",
+      "id": "capital_one_2003",
       "track": "tech",
-      "period": "2006",
+      "period": "2003 — 2003",
       "role": "Siebel Consultant (via Infosys)",
       "org": "Capital One · Richmond, Virginia, US",
       "detail": "Implemented fraud and dispute management workflows for Capital One (US onsite). migrated PL/SQL logic and configured Chordiant/J2EE case management components. integrated Siebel EAI/EIM with middleware for banking CRM operations.",
       "bullets": [
         "Implemented fraud and dispute management workflows for Capital One (US onsite)",
-        "Migrated PL/SQL logic and configured Chordiant/J2EE case management components"
+        "Migrated PL/SQL logic and configured Chordiant/J2EE case management components",
+        "Integrated Siebel EAI/EIM with middleware for banking CRM operations"
       ],
       "skills_used": [
-        "Chordiant/J2EE",
-        "Oracle Database (10g/9i/8i)"
+        "Siebel Financial Services",
+        "Oracle Database (10g/9i/8i)",
+        "Informatica 5.0"
       ],
       "color": "#a78bfa",
       "openByDefault": false
