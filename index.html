@@ -13,10 +13,18 @@
   <header class="dash-header" id="dash-header">
     <div class="header-inner">
       <div class="header-main">
-        <h1 id="profile-name">Loading…</h1>
-        <p class="headline" id="profile-headline"></p>
+        <button type="button" id="profile-photo_btn" class="header-photo-btn" hidden aria-label="View profile photo">
+          <img id="profile-photo" class="header-photo" alt="" width="56" height="56">
+        </button>
+        <div>
+          <h1 id="profile-name">Loading…</h1>
+          <p class="headline" id="profile-headline"></p>
+        </div>
       </div>
-      <div class="header-contact" id="profile-contact"></div>
+      <div class="header-contact">
+        <div id="profile-contact"></div>
+        <div id="profile-links"></div>
+      </div>
     </div>
   </header>
 

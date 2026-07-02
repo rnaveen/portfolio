@@ -1,11 +1,15 @@
 {
     "profile": {
       "name": "Naveen Ramisetty",
-      "headline": "Enterprise Integration & Data Analyst — returning to tech building with AI",
+      "headline": "Enterprise Integration & Data Analyst · Agrarian policy & field research",
       "email": "naveen.ramisetty@gmail.com",
       "phone": "9160309301",
+      "github": "https://github.com/rnaveen",
+      "linkedin": "https://linkedin.com/in/naveen-ramisetty-b79b9b19",
       "summary": "Enterprise integration and data specialist with 23 years across CRM, SOA, and B2B systems, and 15 years of parallel volunteer work in agrarian policy research and farmer welfare advocacy in Telangana.",
       "location": "Hyderabad, India",
+      "photo": "assets/photo.jpg",
+      "impact_callout": "Alongside enterprise consulting, 15+ years in farmer welfare advocacy and agrarian policy research in Telangana.",
       "intro_paragraphs": [
         "I have 20+ years of experience in enterprise applications, integration architecture, CRM/ERP platforms, and data engineering. I worked in IT from 2003–2014 at Ciena and Infosys, then led social-impact research and policy analytics — and I am now setting up a personal learning environment to understand the AI ecosystem while building real apps.",
         "My focus today: agents, skills, and markdown-based instruction files — paired with hands-on projects in Python, dashboards, and automation."
@@ -348,32 +352,32 @@
       {
         "title": "Fitness Tracking App",
         "description": "Log meals and workouts via natural language; get nightly summaries.",
-        "status": "in_progress"
+        "status": "in_progress",
+        "tag": "learning"
       },
       {
         "title": "Portfolio Site",
         "description": "This site — a single-page resume and project showcase.",
-        "status": "in_progress"
+        "status": "in_progress",
+        "tag": "learning"
       },
       {
         "title": "Farmer Suicides Documentation",
         "description": "Scrape newspapers to document and analyze farmer suicide reports.",
-        "status": "planned"
+        "status": "planned",
+        "tag": "impact"
       },
       {
         "title": "Family Will Assistant",
         "description": "An assistant to help draft wills for family members.",
-        "status": "planned"
+        "status": "planned",
+        "tag": "learning"
       },
       {
         "title": "Rental Property Management",
         "description": "Tools to manage rental properties and related workflows.",
-        "status": "planned"
+        "status": "planned",
+        "tag": "planned"
       }
-    ],
-
-    "ui_config": {
-      "default_view": "consulting",
-      "available_views": ["consulting", "skills", "timeline", "projects", "beyond"]
-    }
+    ]
   }

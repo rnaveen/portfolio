@@ -59,6 +59,7 @@ HOBBY_PLACEHOLDERS = {
 
 DOMAIN_RULES = [
     {
+        "id": "banking",
         "title": "Banking and finance",
         "icon": "ti-building-bank",
         "color": "purple",
@@ -69,8 +70,10 @@ DOMAIN_RULES = [
         or "investment" in industry.lower(),
         "clients": [],
         "role_years": 0.0,
+        "role_ids": [],
     },
     {
+        "id": "telecom",
         "title": "Telecom",
         "icon": "ti-antenna-bars-5",
         "color": "teal",
@@ -79,8 +82,10 @@ DOMAIN_RULES = [
         or "telecom" in industry.lower(),
         "clients": [],
         "role_years": 0.0,
+        "role_ids": [],
     },
     {
+        "id": "manufacturing",
         "title": "Manufacturing / electronics",
         "icon": "ti-cpu",
         "color": "coral",
@@ -89,8 +94,10 @@ DOMAIN_RULES = [
         or "electronics" in industry.lower(),
         "clients": [],
         "role_years": 0.0,
+        "role_ids": [],
     },
     {
+        "id": "agricultural_policy",
         "title": "Agricultural policy",
         "icon": "ti-plant-2",
         "color": "pink",
@@ -99,8 +106,15 @@ DOMAIN_RULES = [
         or "farmer" in org.lower(),
         "clients": [],
         "role_years": 0.0,
+        "role_ids": [],
     },
 ]
+
+TAG_LABELS = {
+    "impact": "Impact",
+    "learning": "Learning",
+    "planned": "Planned",
+}
 
 
 def load_json(path: Path) -> dict:
@@ -156,15 +170,30 @@ def is_end_client(role: dict) -> bool:
     return not any(i in org for i in INTERMEDIARIES)
 
 
+def domain_detail(roles: list[dict]) -> str:
+    parts = []
+    for role in roles[:2]:
+        desc = role.get("description", "").strip()
+        if desc:
+            parts.append(desc.rstrip("."))
+    text = ". ".join(parts)
+    if text and not text.endswith("."):
+        text += "."
+    return text
+
+
 def build_domains(roles: list[dict]) -> list[dict]:
     domains = [
         {
+            "id": d["id"],
             "title": d["title"],
             "icon": d["icon"],
             "color": d["color"],
             "match": d["match"],
             "clients": [],
             "role_years": 0.0,
+            "role_ids": [],
+            "matched_roles": [],
         }
         for d in DOMAIN_RULES
     ]
@@ -174,6 +203,7 @@ def build_domains(roles: list[dict]) -> list[dict]:
         org = role.get("organization", "")
         industry = role.get("client_industry", "")
         years = role_years(role)
+        role_id = role.get("id", "")
         matched_any = False
 
         for domain in domains:
@@ -181,16 +211,23 @@ def build_domains(roles: list[dict]) -> list[dict]:
                 if org not in domain["clients"]:
                     domain["clients"].append(org)
                 domain["role_years"] = round(domain["role_years"] + years, 1)
+                if role_id and role_id not in domain["role_ids"]:
+                    domain["role_ids"].append(role_id)
+                    domain["matched_roles"].append(role)
                 matched_any = True
 
         if not matched_any and role.get("track") == "tech":
+            slug = re.sub(r"[^a-z0-9]+", "_", (industry or org).lower()).strip("_") or "other"
             extra_domains.append(
                 {
+                    "id": slug,
                     "title": industry or "Other",
                     "icon": "ti-briefcase",
                     "color": "purple",
                     "clients": [org],
                     "role_years": years,
+                    "role_ids": [role_id] if role_id else [],
+                    "matched_roles": [role],
                 }
             )
 
@@ -200,27 +237,43 @@ def build_domains(roles: list[dict]) -> list[dict]:
             continue
         color_name = domain["color"]
         yrs = domain["role_years"]
+        matched = domain["matched_roles"]
         result.append(
             {
+                "id": domain["id"],
                 "icon": domain["icon"],
                 "title": domain["title"],
                 "subtitle": ", ".join(domain["clients"]),
                 "color": color_name,
                 "color_hex": DOMAIN_COLORS.get(color_name, DOMAIN_COLORS["purple"]),
                 "years": yrs,
+                "detail": domain_detail(matched),
+                "timeline_links": [
+                    {"id": r["id"], "label": r.get("organization", "")}
+                    for r in matched
+                    if r.get("id")
+                ],
             }
         )
 
     for domain in extra_domains:
         color_name = domain["color"]
+        matched = domain["matched_roles"]
         result.append(
             {
+                "id": domain["id"],
                 "icon": domain["icon"],
                 "title": domain["title"],
                 "subtitle": ", ".join(domain["clients"]),
                 "color": color_name,
                 "color_hex": DOMAIN_COLORS.get(color_name, DOMAIN_COLORS["purple"]),
                 "years": domain["role_years"],
+                "detail": domain_detail(matched),
+                "timeline_links": [
+                    {"id": r["id"], "label": r.get("organization", "")}
+                    for r in matched
+                    if r.get("id")
+                ],
             }
         )
 
@@ -293,7 +346,17 @@ def build_core_competencies(schema: dict) -> dict:
 
 
 def build_projects(schema: dict) -> list[dict]:
-    return schema.get("projects", [])
+    result = []
+    for project in schema.get("projects", []):
+        tag = project.get("tag", "learning")
+        result.append(
+            {
+                **project,
+                "tag": tag,
+                "tag_label": TAG_LABELS.get(tag, tag.title()),
+            }
+        )
+    return result
 
 
 def summarize_bullets(role: dict) -> str:
@@ -383,16 +446,15 @@ def build_interests(hobbies_data: dict) -> list[dict]:
     for hobby in hobbies_data.get("hobbies", []):
         title = hobby["title"]
         desc = hobby.get("description", "").strip()
-        generated = False
         if not desc:
-            desc = HOBBY_PLACEHOLDERS.get(title, f"Personal interest — draft description for {title}.")
-            generated = True
+            desc = HOBBY_PLACEHOLDERS.get(title, f"Personal interest — {title}.")
+        slug = re.sub(r"[^a-z0-9]+", "_", title.lower()).strip("_")
         interests.append(
             {
+                "id": slug,
                 "title": title,
                 "description": desc,
                 "icon": hobby_icon(title),
-                "generated": generated,
             }
         )
     return interests
